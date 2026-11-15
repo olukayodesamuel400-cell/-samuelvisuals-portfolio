@@ -14,15 +14,15 @@ body{margin:0} img{max-width:100%} [hidden]{display:none!important}
 <style id="page-css">
 /* Layout: dark studio page. Fixed blurred nav, a huge type opener lit by a light that follows the pointer, a scrolling category strip, an editorial 12-column work grid with 7/5, 6/6 and full-width rows, process, contact. */
 :root {
-  --bg: #0a0a09;
-  --surface: #151411;
-  --fg: #eeeae2;
-  --muted: #928d83;
-  --line: #302c25;
-  --accent: #efb52d;
-  --accent-ink: #f2bd3b;
-  --on-accent: #11100d;
-  --glow: rgba(239, 181, 45, 0.27);
+  --bg: #0d0c0b;
+  --surface: #171512;
+  --fg: #f1ede6;
+  --muted: #9a948a;
+  --line: #2a2723;
+  --accent: #e8ad2c;
+  --accent-ink: #e8ad2c;
+  --on-accent: #17120a;
+  --glow: rgba(232, 173, 44, 0.2);
   --font-display: "Syne", "Helvetica Neue", Arial, sans-serif;
   --font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
@@ -376,91 +376,6 @@ body.intro-on h1 .l > span { animation-play-state: paused; }
   .tile .frame img, .tile .frame video { transition: none; }
   .tile:hover .frame img, .tile:hover .frame video { transform: none; }
 }
-
-/* ---------- Quiet-luxury studio art direction ---------- */
-:root { --accent: #efb52d; --accent-ink: #f2bd3b; --glow: rgba(188,162,122,.16); }
-body { background: var(--bg); letter-spacing: -.008em; }
-::selection { background: rgba(188,162,122,.32); color: var(--fg); }
-.nav { background: rgba(10,10,9,.82); border-bottom-color: rgba(197,173,135,.13); }
-.logo { letter-spacing: .055em; font-size: 18px; }
-.logo i { color: var(--accent-ink); }
-.links a { font-size: 13px; letter-spacing: .04em; }
-.btn { border-radius: 3px; padding: 14px 21px; letter-spacing: .015em; }
-.btn.primary { background: var(--accent); border-color: var(--accent); }
-.btn.primary:hover { filter: brightness(1.08); transform: translateY(-2px); }
-.btn:not(.primary):hover { border-color: var(--accent-ink); }
-.hero { padding-bottom: 2px; }
-.hero .wrap { position: relative; z-index: 1; }
-.hero::after { content:""; position:absolute; width:min(48vw,620px); aspect-ratio:1; right:-13%; top:13%; border:1px solid rgba(197,173,135,.09); border-radius:50%; box-shadow:0 0 0 44px rgba(197,173,135,.018),0 0 0 90px rgba(197,173,135,.014),inset 0 0 90px rgba(197,173,135,.025); pointer-events:none; }
-.hero .spot { background:radial-gradient(ellipse at var(--mx,78%) var(--my,30%),rgba(188,162,122,.13),transparent 68%); }
-.pill { border-radius:3px; padding:8px 12px; background:rgba(255,255,255,.025); border-color:rgba(197,173,135,.2); font-size:12px; letter-spacing:.025em; }
-.pill .dot { width:6px; height:6px; }
-h1 { max-width: 1100px; font-size:clamp(43px,9.1vw,118px); letter-spacing:-.055em; line-height:.91; }
-h1 .amber { color:#c5ad87; }
-h1 .ghost { -webkit-text-stroke:1px rgba(238,234,226,.62); }
-.lede { max-width:48ch; line-height:1.75; font-size:clamp(15px,1.5vw,18px); margin-top:26px; }
-.hero-meta { display:flex; align-items:center; gap:15px; flex-wrap:wrap; margin-top:clamp(44px,7vw,78px); padding-top:17px; border-top:1px solid rgba(197,173,135,.16); color:var(--muted); }
-.hero-meta .mono { font-size:10px; letter-spacing:.14em; }
-.hero-rule { width:34px; height:1px; background:var(--accent); opacity:.65; }
-.hero-scroll { margin-left:auto; }
-.hero-scroll b { color:var(--accent-ink); font-size:15px; margin-left:7px; font-weight:400; }
-.marquee { margin-top:clamp(34px,6vw,70px); border-color:rgba(197,173,135,.16); padding-block:13px; }
-.mq span::after { width:4px; height:4px; background:var(--accent); opacity:.8; }
-.section { padding-top:clamp(82px,11vw,142px); }
-.eyebrow { letter-spacing:.16em; font-size:10px; }
-h2 { letter-spacing:-.045em; }
-.section-note { color:var(--muted); margin:17px 0 0; max-width:48ch; font-size:14px; line-height:1.7; }
-.sec-head { margin-bottom:34px; }
-.count { letter-spacing:.14em; font-size:10px; }
-.chips { gap:7px; margin-bottom:27px; }
-.chip { border-radius:3px; font-size:12px; padding:8px 13px; letter-spacing:.025em; }
-.chip[aria-pressed="true"] { background:var(--accent); color:#11100d; border-color:var(--accent); }
-.grid { gap:38px 18px; }
-.tile { gap:14px; }
-.tile .frame { border-radius:2px; background:#12110f; }
-.tile .frame::after { border-radius:2px; box-shadow:inset 0 0 0 1px rgba(197,173,135,.10); }
-.tile:hover .frame::after { box-shadow:inset 0 0 0 1px rgba(197,173,135,.72); }
-.tile .frame img, .tile .frame video { transition:transform 1.1s cubic-bezier(.2,.7,.1,1),filter .7s; }
-.tile:hover .frame img, .tile:hover .frame video { transform:scale(1.035); filter:saturate(.94); }
-.frame-index, .film-tag { position:absolute; z-index:2; top:14px; color:rgba(245,240,230,.84); font-size:9px; letter-spacing:.15em; text-shadow:0 1px 8px rgba(0,0,0,.6); }
-.frame-index { left:14px; }
-.film-tag { right:14px; padding:6px 8px; border:1px solid rgba(255,255,255,.26); background:rgba(10,10,9,.55); backdrop-filter:blur(8px); }
-.view-chip { left:auto; right:14px; top:auto; bottom:14px; border:1px solid rgba(255,255,255,.25); background:rgba(10,10,9,.76); backdrop-filter:blur(8px); border-radius:2px; padding:8px 11px; font-size:9px; letter-spacing:.12em; text-transform:uppercase; }
-.view-chip b { margin-left:8px; color:var(--accent-ink); font-size:13px; font-weight:400; }
-.cap { align-items:center; }
-.cap b { font-size:17px; letter-spacing:-.025em; }
-.cap .mono { font-size:9px; letter-spacing:.14em; }
-.motion { border-top:1px solid var(--line); padding-top:20px; margin-top:34px; font-size:13px; }
-.steps li { grid-template-columns: minmax(70px,.35fr) 1fr; align-items:start; column-gap:18px; padding-block:30px; }
-.steps li::before { grid-row:span 2; font-size:clamp(38px,5vw,60px); color:var(--accent-ink); }
-.steps h3 { font-size:21px; }
-.steps p { font-size:14px; line-height:1.75; }
-.contact { border-top-color:rgba(197,173,135,.22); }
-.contact h2 { max-width:13ch; }
-.reach a.row, .reach .row { border-radius:2px; border-color:rgba(197,173,135,.2); background:rgba(255,255,255,.015); }
-.reach a.row:hover { border-color:var(--accent); transform:translateX(4px); }
-footer { border-top-color:rgba(197,173,135,.17); font-size:11px; letter-spacing:.015em; }
-.vmedia .vfilm { border-radius:2px; border-color:rgba(197,173,135,.2); background:radial-gradient(ellipse at 50% 35%,#211d17,#100f0d 72%); }
-.vmedia .vfilm video { border-radius:1px; }
-@media (min-width:760px) {
-  .hero { padding-top:calc(68px + env(safe-area-inset-top,0px) + clamp(64px,9vw,120px)); }
-  .hero .wrap { max-width:1200px; }
-  .grid { gap:48px 22px; }
-  .tile[style*="--span:7"] { grid-column:span 7; }
-  .tile[style*="--span:5"] { grid-column:span 5; }
-}
-@media (max-width:600px) {
-  .hero::after { width:90vw; right:-55%; top:22%; opacity:.65; }
-  .hero-meta { gap:10px; }
-  .hero-meta .mono { font-size:8px; }
-  .hero-rule { width:18px; }
-  .hero-scroll { width:100%; margin:7px 0 0; }
-  h1 { font-size:clamp(42px,12vw,66px); }
-  .steps li { grid-template-columns:54px 1fr; column-gap:12px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; }
-}
 </style>
 </head>
 <body>
@@ -524,16 +439,14 @@ footer { border-top-color:rgba(197,173,135,.17); font-size:11px; letter-spacing:
       '<p class="pill"><i class="dot"></i>Based in Lagos, Nigeria<b>&middot;</b>Open to brand projects</p>' +
       '<h1><span class="l"><span>Premium 3D</span></span><span class="l"><span>renders that</span></span><span class="l"><span class="amber">elevate</span> <span class="ghost">your</span></span><span class="l"><span>brand.</span></span></h1>' +
       '<p class="lede">Product renders for perfume, drinks and skincare brands. Built and lit in Blender, delivered as high-resolution stills or short animations.</p>' +
-      '<div class="cta-row"><a class="btn primary" href="#contact">Start a project <span aria-hidden="true">&rarr;</span></a><a class="btn" href="#work">Explore selected work</a></div>' +
-      '<div class="hero-meta"><span class="mono">Independent CGI artist</span><span class="hero-rule"></span><span class="mono">Product imagery / Motion / Art direction</span><span class="hero-scroll mono">Scroll to explore <b aria-hidden="true">&darr;</b></span></div>' +
+      '<div class="cta-row"><a class="btn primary" href="#contact">Get a render</a><a class="btn" href="#work">See the work</a></div>' +
     '</div>' +
     '<div class="marquee" aria-hidden="true"><div class="mq">' + mq + mq + mq + mq + '</div></div></section>' +
 
     '<section class="section wrap" id="work" aria-labelledby="work-h">' +
-      '<div class="sec-head rv"><div><p class="eyebrow mono">01 / Selected work</p><h2 id="work-h">Renders built to make people want to pick the product up.</h2><p class="section-note">A selection of product worlds, crafted through light, material and detail.</p></div><span class="count mono" id="count"></span></div>' +
+      '<div class="sec-head rv"><div><p class="eyebrow mono">Selected work</p><h2 id="work-h">Renders built to make people want to pick the product up.</h2></div><span class="count mono" id="count"></span></div>' +
       '<div class="chips rv" id="chips" role="group" aria-label="Filter by category"></div>' +
       '<div class="grid" id="grid"></div>' +
-      '<p class="motion rv">Looking for motion? <a href="https://www.behance.net/samuelolukayo" target="_blank" rel="noopener">Check out my animations on my Behance page</a> &rarr;</p>' +
     '</section>' +
 
     '<section class="section wrap" id="process" aria-labelledby="proc-h">' +
@@ -547,7 +460,7 @@ footer { border-top-color:rgba(197,173,135,.17); font-size:11px; letter-spacing:
 
     '<section class="section wrap" id="contact" aria-labelledby="contact-h">' +
       '<div class="contact rv">' +
-        '<div><p class="eyebrow mono">03 / Start a project</p><h2 id="contact-h">Let&rsquo;s make your product impossible to ignore.</h2>' +
+        '<div><p class="eyebrow mono">Contact</p><h2 id="contact-h">Let&rsquo;s make your product look expensive.</h2>' +
           '<p>Tell me the product and where the renders will be used. I will reply with what I can do and a timeline.</p>' +
           '<ul class="pay"><li><span class="mono">Abroad</span><span>Payment through Payoneer.</span></li><li><span class="mono">Nigeria</span><span>Payment by bank transfer in naira.</span></li></ul>' +
         '</div>' +
@@ -591,7 +504,7 @@ footer { border-top-color:rgba(197,173,135,.17); font-size:11px; letter-spacing:
     }
     return '<article class="tile" style="--span:' + span + '" data-act="open" data-id="' + p.id + '" tabindex="0" role="button" aria-label="Open ' + esc(p.title) + '">' +
       tools +
-      '<div class="frame"' + (p.pos ? ' style="--pos:' + esc(p.pos) + '"' : '') + '>' + (cover ? mediaTag(cover, p.title) : '') + '<span class="frame-index mono">' + String(i + 1).padStart(2, '0') + ' / PROJECT</span>' + (p.media && p.media.some(function (m) { return m.k === 'vid'; }) ? '<span class="film-tag mono">Film + stills</span>' : '') + '<span class="view-chip mono">View project <b aria-hidden="true">&rarr;</b></span></div>' +
+      '<div class="frame"' + (p.pos ? ' style="--pos:' + esc(p.pos) + '"' : '') + '>' + (cover ? mediaTag(cover, p.title) : '') + '<span class="view-chip mono">View</span></div>' +
       '<div class="cap"><b>' + esc(p.title) + '</b><span class="mono">' + esc(p.cat || '') + '</span></div></article>';
   }
   function slotHtml(i, n) {
